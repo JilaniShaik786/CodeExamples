@@ -57,6 +57,23 @@ public class voterService {
 		vo.setVotername(vt.getVotername());
 		return vr.save(vo);
 	}
+
+	public voter updateVotr(Integer vid,voter vt) {
+		// TODO Auto-generated method stub
+		
+		voter vtr=vr.findById(vid).orElseThrow(()->new RuntimeException("voter is not available"));
+		System.out.println("voter details = "+vtr);
+		if(vt.getVotername()!=null && !vt.getVotername().isEmpty()) {
+			vtr.setVotername(vt.getVotername());
+		}
+		if(vt.getVoterage()!=null) {
+			vtr.setVotername(vt.getVotername());
+		}
+		if(vt.getVoterdob()!=null) {
+			vtr.setVotername(vt.getVotername());
+		}
+		return vr.save(vtr);
+	}
 	
 	
 
