@@ -2,6 +2,7 @@ package com.jilani.voter.service;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -40,6 +41,11 @@ public class voterService {
 		// TODO Auto-generated method stub
 		
 		return vr.findById(voterId).get();
+	}
+
+	public List<voter> getAllVoters() {
+		// TODO Auto-generated method stub
+		return vr.findAll();
 	}
 	
 	

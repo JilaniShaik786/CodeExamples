@@ -1,5 +1,7 @@
 package com.jilani.voter.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +29,11 @@ public class voterController {
 	@GetMapping("/{voterId}")
 	public voter getUserDetails(@PathVariable Integer voterId){
 		voter vtr=vs.getVoter(voterId);
+		return vtr;
+	}
+	@GetMapping
+	public List<voter> getUserDetails(){
+		List<voter> vtr=vs.getAllVoters();
 		return vtr;
 	}
 }
