@@ -47,6 +47,16 @@ public class voterService {
 		// TODO Auto-generated method stub
 		return vr.findAll();
 	}
+
+	public voter updateVoter(voter vt) {
+		// TODO Auto-generated method stub
+		voter vo=new voter();
+		vo.setVoterid(vt.getVoterid());
+		vo.setVoterage(vt.getVoterage());
+		vo.setVoterdob(vt.getVoterdob());
+		vo.setVotername(vt.getVotername());
+		return vr.save(vo);
+	}
 	
 	
 
